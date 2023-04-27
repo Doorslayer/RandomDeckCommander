@@ -1,3 +1,5 @@
+//Author: Kaylehb Edward T. States
+//Date: 2023-04-27
 window.onload = setDefaultValues;
 
 

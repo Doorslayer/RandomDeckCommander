@@ -1,3 +1,5 @@
+//Author: Kaylehb Edward T. States
+//Date: 2023-04-27
 window.onload = init();
 
 function init() {
@@ -50,7 +52,7 @@ function addDouble() {
     if (parseInt(sessionStorage.getItem('doubles')) >= 1) {
         sessionStorage.setItem('doubles', parseInt(sessionStorage.getItem('doubles')) - 1);
         document.getElementById("cardImage").src = "../images/Loading.png";
-        document.getElementById("decklist").textContent = document.getElementById("decklist") + 2 + " " + sessionStorage.getItem('card') + "\n";
+        document.getElementById("decklist").textContent = document.getElementById("decklist").textContent + 2 + " " + sessionStorage.getItem('card') + "\n";
         nextCard();
     }
 }
@@ -59,7 +61,7 @@ function addTriple() {
     if (parseInt(sessionStorage.getItem('triples')) >= 1) {
         sessionStorage.setItem('triples', parseInt(sessionStorage.getItem('triples')) - 1);
         document.getElementById("cardImage").src = "../images/Loading.png";
-        document.getElementById("decklist").textContent = document.getElementById("decklist") + 3 + " " + sessionStorage.getItem('card') + "\n";
+        document.getElementById("decklist").textContent = document.getElementById("decklist").textContent + 3 + " " + sessionStorage.getItem('card') + "\n";
         nextCard();
     }
 }
@@ -68,7 +70,7 @@ function addPlayset() {
     if (parseInt(sessionStorage.getItem('playsets')) >= 1) {
         sessionStorage.setItem('playsets', parseInt(sessionStorage.getItem('playsets')) - 1);
         document.getElementById("cardImage").src = "../images/Loading.png";
-        document.getElementById("decklist").textContent = document.getElementById("decklist") + 4 + " " + sessionStorage.getItem('card') + "\n";
+        document.getElementById("decklist").textContent = document.getElementById("decklist").textContent + 4 + " " + sessionStorage.getItem('card') + "\n";
         nextCard();
     }
 }
