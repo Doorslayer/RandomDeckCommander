@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="javascript.js"></script>
     <title>MTG Random Deckbuilder</title>
 </head>
 <body>
-    
+
+   <h1>Welcome to MTG Random Deckbuilder</h1>
+   <h2>Skips</h2>
+    <div class="buttonRow">
+       <button type="button" onclick="incrementSkips(-1)" class="decreaseButton">-</button>
+       <p id="SkipsVal"></p>
+       <button type="button" onclick="incrementSkips(1)">+</button>
+    </div>
+    <br>
+    <h2>Doubles</h2>
+    <div class="buttonRow">
+         <button type="button" onclick="incrementDoubles(-1)" class="decreaseButton">-</button>
+         <p id="DoublesVal"></p>
+         <button type="button" onclick="incrementDoubles(1)">+</button>
+     </div>
+     <br>
+     <h2>Triples</h2>
+     <div class="buttonRow">
+         <button type="button" onclick="incrementTriples(-1)" class="decreaseButton">-</button>
+         <p id="TriplesVal"></p>
+         <button type="button" onclick="incrementTriples(1)">+</button>
+     </div>
+     <br>
+     <h2>Playsets</h2>
+     <div class="buttonRow">
+         <button type="button" onclick="incrementPlaysets(-1)" class="decreaseButton">-</button>
+         <p id="PlaysetsVal"></p>
+         <button type="button" onclick="incrementPlaysets(1)">+</button>
+     </div>
+     <br>
+     <br>
+     <button type="button" onclick="Submit()">Submit</button>
+
+     <script></script>
 </body>
 </html>

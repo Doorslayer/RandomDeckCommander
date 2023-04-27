@@ -1,0 +1,72 @@
+/* Stylesheet provided by ChatGPT, an AI language model trained by OpenAI with minor human adjustments*/
+/* Set default font family and size */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Add some spacing between elements */
+  h1, h2, p, button {
+    margin: 10px;
+  }
+  
+  /* Style the button */
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Style the increment/decrement buttons */
+  .buttonRow button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .buttonRow button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .buttonRow .decreaseButton {
+    background-color: #FF5733;
+  }
+
+  .buttonRow .decreaseButton:hover {
+    background-color: #E64C2E;
+  }
+
+  /* Style the value display */
+  .buttonRow p {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    margin: 0 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+  }
+  
+  /* Center the form */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
