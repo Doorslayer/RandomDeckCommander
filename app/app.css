@@ -1,5 +1,33 @@
+/* Stylesheet provided by ChatGPT, an AI language model trained by OpenAI with minor human adjustments*/
+
 body {
     text-align: center;
     font-family: Arial, sans-serif;
     font-size: 16px;
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+#options button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4286f4;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    margin: 0 10px;
+    font-size: 24px;
+}
+  
+#options button:hover {
+    background-color: #235bb8;
 }
