@@ -17,7 +17,7 @@ function nextCard() {
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let card = JSON.parse(xhttp.responseText);
-            localStorage.setItem('card', card.name);
+            sessionStorage.setItem('card', card.name);
             document.getElementById("cardImage").src = card.image_uris.normal;
         }
     };
