@@ -10,7 +10,7 @@ function nextCard() {
             document.getElementById("cardImage").src = card.image_uris.normal;
         }
     };
-    xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny", true);
+    xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny+-t%3Abasic", true);
     xhttp.send();
 
 
