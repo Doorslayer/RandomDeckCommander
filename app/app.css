@@ -1,4 +1,4 @@
-/* Stylesheet provided by ChatGPT, an AI language model trained by OpenAI with minor human adjustments*/
+/* Stylesheet provided by ChatGPT, an AI language model trained by OpenAI, with minor human adjustments*/
 
 body {
     text-align: center;
@@ -30,4 +30,9 @@ body {
   
 #options button:hover {
     background-color: #235bb8;
+}
+
+textarea {
+    margin-top: 20px;
+    width: 1000px;
 }

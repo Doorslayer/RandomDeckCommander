@@ -30,3 +30,45 @@ function nextCard() {
     document.getElementById("tripleButton").textContent = "Triple (" + sessionStorage.getItem('triples') + ")";
     document.getElementById("playsetButton").textContent = "Playsets (" + sessionStorage.getItem('playsets') + ")";
 }
+
+function skip() {
+    if (parseInt(sessionStorage.getItem('skips')) >= 1) {
+        sessionStorage.setItem('skips', parseInt(sessionStorage.getItem('skips')) - 1);
+        document.getElementById("cardImage").src = "../images/Loading.png";
+        nextCard();
+    }
+}
+
+function addSingle() {
+    document.getElementById("cardImage").src = "../images/Loading.png";
+    document.getElementById("decklist").textContent = document.getElementById("decklist").textContent + 1 + " " + sessionStorage.getItem('card') + "\n";
+    
+    nextCard();
+}
+
+function addDouble() {
+    if (parseInt(sessionStorage.getItem('doubles')) >= 1) {
+        sessionStorage.setItem('doubles', parseInt(sessionStorage.getItem('doubles')) - 1);
+        document.getElementById("cardImage").src = "../images/Loading.png";
+        document.getElementById("decklist").textContent = document.getElementById("decklist") + 2 + " " + sessionStorage.getItem('card') + "\n";
+        nextCard();
+    }
+}
+
+function addTriple() {
+    if (parseInt(sessionStorage.getItem('triples')) >= 1) {
+        sessionStorage.setItem('triples', parseInt(sessionStorage.getItem('triples')) - 1);
+        document.getElementById("cardImage").src = "../images/Loading.png";
+        document.getElementById("decklist").textContent = document.getElementById("decklist") + 3 + " " + sessionStorage.getItem('card') + "\n";
+        nextCard();
+    }
+}
+
+function addPlayset() {
+    if (parseInt(sessionStorage.getItem('playsets')) >= 1) {
+        sessionStorage.setItem('playsets', parseInt(sessionStorage.getItem('playsets')) - 1);
+        document.getElementById("cardImage").src = "../images/Loading.png";
+        document.getElementById("decklist").textContent = document.getElementById("decklist") + 4 + " " + sessionStorage.getItem('card') + "\n";
+        nextCard();
+    }
+}
