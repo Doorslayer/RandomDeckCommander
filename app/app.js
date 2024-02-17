@@ -21,7 +21,12 @@ function nextCard() {
             let card = JSON.parse(xhttp.responseText);
             console.log(card.name);
             sessionStorage.setItem('card', card.name);
-            document.getElementById("cardImage").src = card.image_uris.normal;
+            if(card.image_uris.normal) {
+                document.getElementById("cardImage").src = card.image_uris.normal;
+            } else{
+                document.getElementById("cardImage").src = card.card_faces[0].image_uris.normal;
+                document.getElementById("cardImage2").src = card.card_faces[1].image_uris.normal;
+            }
         }
     };
     xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny+-t%3Abasic", true);
