@@ -21,7 +21,7 @@ function nextCard() {
             let card = JSON.parse(xhttp.responseText);
             console.log(card.name);
             sessionStorage.setItem('card', card.name);
-            if(card.image_uris.normal) {
+            if(not (card.layout == "transform" || card.layout == "modal_dfc")) {
                 document.getElementById("cardImage").src = card.image_uris.normal;
             } else{
                 document.getElementById("cardImage").src = card.card_faces[0].image_uris.normal;
