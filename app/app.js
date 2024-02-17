@@ -23,6 +23,7 @@ function nextCard() {
             sessionStorage.setItem('card', card.name);
             if(!(card.layout == "transform" || card.layout == "modal_dfc")) {
                 document.getElementById("cardImage").src = card.image_uris.normal;
+                document.getElementById("cardImage2").src = "null"
             } else{
                 document.getElementById("cardImage").src = card.card_faces[0].image_uris.normal;
                 document.getElementById("cardImage2").src = card.card_faces[1].image_uris.normal;
