@@ -1,6 +1,6 @@
 <!--
 Author: Kaylehb Edward T. States
-Date: 2023-04-27
+Date: 2024-03-29
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,16 +15,9 @@ Date: 2023-04-27
 <body>
 
    <h1>MTG Random Deckbuilder</h1>
-   <img id="cardImage" src="../images/Loading.png">
-   <img id="cardImage2" src="null">
+   <div id="imageRow"></div>
    <br>
-   <div id="options">
-        <button type="button" onclick="skip()" id="skipButton"></button>
-        <button type="button" onclick="addSingle()" id="singleButton"></button>
-        <button type="button" onclick="addDouble()" id="doubleButton"></button>
-        <button type="button" onclick="addTriple()" id="tripleButton"></button>
-        <button type="button" onclick="addPlayset()" id="playsetButton"></button>
-   </div>
+   <div id="options"></div>
    <textarea id="decklist"></textarea>
 
 </body>

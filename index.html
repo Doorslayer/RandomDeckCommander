@@ -1,6 +1,6 @@
 <!--
 Author: Kaylehb Edward T. States
-Date: 2023-04-27
+Date: 2024-03-29
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,34 +15,19 @@ Date: 2023-04-27
 <body>
 
    <h1>Welcome to MTG Random Deckbuilder</h1>
-   <h2>Skips</h2>
+   <h2>Commander Options</h2>
     <div class="buttonRow">
-       <button type="button" onclick="incrementSkips(-1)" class="decreaseButton">-</button>
-       <p id="SkipsVal"></p>
-       <button type="button" onclick="incrementSkips(1)">+</button>
+       <button type="button" onclick="incrementCOptions(-1)" class="decreaseButton">-</button>
+       <p id="COptionsVal"></p>
+       <button type="button" onclick="incrementCOptions(1)">+</button>
     </div>
     <br>
-    <h2>Doubles</h2>
+    <h2>Normal Options</h2>
     <div class="buttonRow">
-         <button type="button" onclick="incrementDoubles(-1)" class="decreaseButton">-</button>
-         <p id="DoublesVal"></p>
-         <button type="button" onclick="incrementDoubles(1)">+</button>
+         <button type="button" onclick="incrementNOptions(-1)" class="decreaseButton">-</button>
+         <p id="NOptionsVal"></p>
+         <button type="button" onclick="incrementNOptions(1)">+</button>
      </div>
-     <br>
-     <h2>Triples</h2>
-     <div class="buttonRow">
-         <button type="button" onclick="incrementTriples(-1)" class="decreaseButton">-</button>
-         <p id="TriplesVal"></p>
-         <button type="button" onclick="incrementTriples(1)">+</button>
-     </div>
-     <br>
-     <h2>Playsets</h2>
-     <div class="buttonRow">
-         <button type="button" onclick="incrementPlaysets(-1)" class="decreaseButton">-</button>
-         <p id="PlaysetsVal"></p>
-         <button type="button" onclick="incrementPlaysets(1)">+</button>
-     </div>
-     <br>
      <br>
      <a href="app/app.html"><button type="button">Start</button></a>
 
