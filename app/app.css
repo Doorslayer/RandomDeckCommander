@@ -37,3 +37,26 @@ textarea {
     width: 1000px;
     height: 2000px;
 }
+
+#extraButtons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#extraButtons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4286f4; /* Pick appropriate color */
+    color: black; /* Pick a readable font color */
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    margin: 0 10px;
+}
+
+#extraButtons button:hover {
+    background-color: #235bb8; /* Pick appropriate hover color */
+}
