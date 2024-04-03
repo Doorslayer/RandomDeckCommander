@@ -134,7 +134,7 @@ function getPartner() {
                 displayCard(card, i)
             }
         };
-        xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny+is%3Acommander+o:partner", true);
+        xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny+is%3Acommander+o:partner+-o:\"partner with\"", true);
         xhttp.send();
     }
 }
