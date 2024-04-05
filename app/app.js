@@ -1,5 +1,5 @@
 //Author: Kaylehb Edward T. States
-//Date: 2024-03-29
+//Date: 2024-04-05
 window.onload = init();
 
 function init() {
@@ -10,6 +10,11 @@ function init() {
         sessionStorage.setItem('Friends', 'F');
         sessionStorage.setItem('Background', 'F');
         sessionStorage.setItem('Companion', 'F');
+        sessionStorage.setItem('W', 'F');
+        sessionStorage.setItem('U', 'F');
+        sessionStorage.setItem('B', 'F');
+        sessionStorage.setItem('R', 'F');
+        sessionStorage.setItem('G', 'F');
         document.getElementById('partnerButton').style.backgroundColor = "#FF6347";
         document.getElementById('friendsButton').style.backgroundColor = "#FF6347";
         document.getElementById('backgroundButton').style.backgroundColor = "#FF6347";
@@ -59,6 +64,56 @@ function toggleCompanion() {
     }
 }
 
+function toggleW() {
+    if(sessionStorage.getItem('W') == 'F') {
+        sessionStorage.setItem('W', 'T');
+        document.getElementById('WButton').style.backgroundColor = "#e3db7f";
+    } else {
+        sessionStorage.setItem('W', 'F');
+        document.getElementById('WButton').style.backgroundColor = "#8c8c8c";
+    }
+}
+
+function toggleU() {
+    if(sessionStorage.getItem('U') == 'F') {
+        sessionStorage.setItem('U', 'T');
+        document.getElementById('UButton').style.backgroundColor = "#1827b5";
+    } else {
+        sessionStorage.setItem('U', 'F');
+        document.getElementById('UButton').style.backgroundColor = "#8c8c8c";
+    }
+}
+
+function toggleB() {
+    if(sessionStorage.getItem('B') == 'F') {
+        sessionStorage.setItem('B', 'T');
+        document.getElementById('BButton').style.backgroundColor = "#3a0657";
+    } else {
+        sessionStorage.setItem('B', 'F');
+        document.getElementById('BButton').style.backgroundColor = "#8c8c8c";
+    }
+}
+
+function toggleR() {
+    if(sessionStorage.getItem('R') == 'F') {
+        sessionStorage.setItem('R', 'T');
+        document.getElementById('RButton').style.backgroundColor = "#940a0a";
+    } else {
+        sessionStorage.setItem('R', 'F');
+        document.getElementById('RButton').style.backgroundColor = "#8c8c8c";
+    }
+}
+
+function toggleG() {
+    if(sessionStorage.getItem('G') == 'F') {
+        sessionStorage.setItem('G', 'T');
+        document.getElementById('GButton').style.backgroundColor = "#178520";
+    } else {
+        sessionStorage.setItem('G', 'F');
+        document.getElementById('GButton').style.backgroundColor = "#8c8c8c";
+    }
+}
+
 function getCommander() {
     //setup images
     for (let i = 0; i < parseInt(sessionStorage.getItem('COptions')); i++){
@@ -82,7 +137,8 @@ function getCommander() {
             if (this.readyState == 4 && this.status == 200) {
                 let card = JSON.parse(xhttp.responseText);
                 let cIdent = card.color_identity;
-                if (cIdent == []){sessionStorage.setItem('cardIdent' + i, 'c')}
+                console.log(cIdent);
+                if (cIdent.length == 0){sessionStorage.setItem('cardIdent' + i, 'C')}
                 else  {
                     sessionStorage.setItem('cardIdent' + i, "")
                     if (cIdent.includes('W')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'W')}
@@ -91,6 +147,7 @@ function getCommander() {
                     if (cIdent.includes('R')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'R')}
                     if (cIdent.includes('G')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'G')}
                 }
+                console.log(sessionStorage.getItem('cardIdent' + i))
                 displayCard(card, i)
             }
         };
@@ -122,7 +179,7 @@ function getPartner() {
             if (this.readyState == 4 && this.status == 200) {
                 let card = JSON.parse(xhttp.responseText);
                 let cIdent = card.color_identity;
-                if (cIdent == []){sessionStorage.setItem('cardIdent' + i, 'c')}
+                if (cIdent.length == 0){sessionStorage.setItem('cardIdent' + i, 'c')}
                 else  {
                     sessionStorage.setItem('cardIdent' + i, "")
                     if (cIdent.includes('W')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'W')}
@@ -162,7 +219,7 @@ function getFriend() {
             if (this.readyState == 4 && this.status == 200) {
                 let card = JSON.parse(xhttp.responseText);
                 let cIdent = card.color_identity;
-                if (cIdent == []){sessionStorage.setItem('cardIdent' + i, 'c')}
+                if (cIdent.length == 0){sessionStorage.setItem('cardIdent' + i, 'c')}
                 else  {
                     sessionStorage.setItem('cardIdent' + i, "")
                     if (cIdent.includes('W')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'W')}
@@ -202,7 +259,7 @@ function getBackground() {
             if (this.readyState == 4 && this.status == 200) {
                 let card = JSON.parse(xhttp.responseText);
                 let cIdent = card.color_identity;
-                if (cIdent == []){sessionStorage.setItem('cardIdent' + i, 'c')}
+                if (cIdent.length == 0){sessionStorage.setItem('cardIdent' + i, 'c')}
                 else  {
                     sessionStorage.setItem('cardIdent' + i, "")
                     if (cIdent.includes('W')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'W')}
@@ -242,7 +299,7 @@ function getDoctor() {
             if (this.readyState == 4 && this.status == 200) {
                 let card = JSON.parse(xhttp.responseText);
                 let cIdent = card.color_identity;
-                if (cIdent == []){sessionStorage.setItem('cardIdent' + i, 'c')}
+                if (cIdent.length == 0){sessionStorage.setItem('cardIdent' + i, 'c')}
                 else  {
                     sessionStorage.setItem('cardIdent' + i, "")
                     if (cIdent.includes('W')) {sessionStorage.setItem('cardIdent' + i, sessionStorage.getItem('cardIdent' + i) + 'W')}
@@ -284,7 +341,7 @@ function nextCard() {
                 displayCard(card, i)
             }
         };  
-        xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny+-t:conspiracy+-t:attraction+-o:ante+-t:basic+id<=" + sessionStorage.getItem("ident"), true);
+        xhttp.open("GET", "https://api.scryfall.com/cards/random?q=in%3Apaper+not%3Afunny+-t:conspiracy+-t:attraction+-t:stickers+-o:ante+-t:basic+id<=" + sessionStorage.getItem("ident"), true);
         xhttp.send();
     }  
 }
@@ -305,6 +362,11 @@ function addCommander(i) {
     document.getElementById("decklist").textContent = document.getElementById("decklist").textContent + 1 + " " + sessionStorage.getItem('card' + i) + "\n";
     console.log('cardIdent' + i);
     sessionStorage.setItem("ident", sessionStorage.getItem('cardIdent' + i));
+    if (sessionStorage.getItem('W') == 'T') {sessionStorage.setItem('ident', sessionStorage.getItem('ident') + 'W')}
+    if (sessionStorage.getItem('U') == 'T') {sessionStorage.setItem('ident', sessionStorage.getItem('ident') + 'U')}
+    if (sessionStorage.getItem('B') == 'T') {sessionStorage.setItem('ident', sessionStorage.getItem('ident') + 'B')}
+    if (sessionStorage.getItem('R') == 'T') {sessionStorage.setItem('ident', sessionStorage.getItem('ident') + 'R')}
+    if (sessionStorage.getItem('G') == 'T') {sessionStorage.setItem('ident', sessionStorage.getItem('ident') + 'G')}
 
     clearStuff();
     if (sessionStorage.getItem('Partner') == 'T') {
